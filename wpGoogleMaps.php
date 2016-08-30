@@ -5638,7 +5638,7 @@ if (function_exists('wpgmza_register_pro_version')) {
     add_action('wp_ajax_delete_polyline', 'wpgmaps_action_callback_basic');
     
     add_action('template_redirect','wpgmaps_check_shortcode');
-    add_action('wp_footer', 'wpgmaps_user_javascript_basic');
+    add_action('wp_footer', 'wpgmaps_user_javascript_basic',10000);//Gmap work good only if is the last script :)
     add_shortcode( 'wpgmza', 'wpgmaps_tag_basic' );
 }
 
